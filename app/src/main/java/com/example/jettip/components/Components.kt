@@ -30,16 +30,23 @@ fun InputField(modifier: Modifier=Modifier,
                onAction: KeyboardActions = KeyboardActions.Default
 
 ){
-    OutlinedTextField(value = valueState.value, onValueChange = { valueState.value = it },
+    OutlinedTextField(value = valueState.value,
+        onValueChange = { valueState.value = it },
         label = { Text(text = labelId)}
-    , leadingIcon = { Icon(imageVector = Icons.Rounded.AttachMoney, contentDescription = "Money Icon")}
+    , leadingIcon =
+        { Icon(imageVector = Icons.Rounded.AttachMoney,
+            contentDescription = "Money Icon")}
     , singleLine = isSingleLine,
-        textStyle = TextStyle(fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground),
-        modifier = modifier.padding(bottom = 10.dp, start = 10.dp,end =10.dp),
+        textStyle = TextStyle(fontSize = 18.sp,
+            color = MaterialTheme.colorScheme.onBackground),
+        modifier = modifier.padding(bottom = 10.dp,
+            start = 10.dp,
+            end =10.dp),
        // modifier.Modifier(bottom = 10.dp, start = 10.dp,end =10.dp),
 
         enabled = enabled,
-        keyboardOptions = KeyboardOptions( keyboardType=keyboardType,
+        keyboardOptions = KeyboardOptions(
+            keyboardType=keyboardType,
              imeAction = imeAction),
         keyboardActions = onAction
 
